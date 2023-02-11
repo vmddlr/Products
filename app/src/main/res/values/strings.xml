@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Products</string>
+    <string name="str_title">Lista de Productor</string>
+    <string name="str_pref">Predefinida</string>
+    <string name="str_men_price">Menor Precio</string>
+    <string name="str_maj_price">mayor precio</string>
+</resources>

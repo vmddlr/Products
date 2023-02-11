@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/dimen_ten">
+
+    <ImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="@dimen/dimen_one_hundred"
+        android:layout_height="@dimen/dimen_one_hundred"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textSize="@dimen/txt_dimen_twenty"
+        tools:text="product name"
+        app:layout_constraintStart_toEndOf="@+id/ivProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivProduct"
+        android:layout_marginStart="@dimen/dimen_five" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textSize="@dimen/txt_dimen_sixteen"
+        tools:text="product price"
+        app:layout_constraintStart_toEndOf="@+id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        android:layout_marginStart="@dimen/dimen_five" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPriceWithDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_one"
+        android:layout_marginTop="@dimen/dimen_twenty"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textSize="@dimen/txt_dimen_sixteen"
+        tools:text="product price"
+        app:layout_constraintStart_toEndOf="@+id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice"
+        android:layout_marginStart="@dimen/dimen_five" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvOne"
+        android:layout_width="@dimen/dimen_twenty"
+        android:layout_height="@dimen/dimen_twenty"
+        app:cardCornerRadius="@dimen/dimen_fifty"
+        app:cardBackgroundColor="@color/black"
+        android:layout_marginStart="@dimen/dimen_five"
+        app:layout_constraintStart_toEndOf="@+id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceWithDiscount" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTwo"
+        android:layout_width="@dimen/dimen_twenty"
+        android:layout_height="@dimen/dimen_twenty"
+        app:cardCornerRadius="@dimen/dimen_fifty"
+        app:cardBackgroundColor="@color/black"
+        android:layout_marginStart="@dimen/dimen_five"
+        app:layout_constraintStart_toEndOf="@+id/cvOne"
+        app:layout_constraintTop_toTopOf="@+id/cvOne" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvThree"
+        android:layout_width="@dimen/dimen_twenty"
+        android:layout_height="@dimen/dimen_twenty"
+        app:cardCornerRadius="@dimen/dimen_fifty"
+        app:cardBackgroundColor="@color/black"
+        android:layout_marginStart="@dimen/dimen_five"
+        app:layout_constraintStart_toEndOf="@+id/cvTwo"
+        app:layout_constraintTop_toTopOf="@+id/cvOne" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        android:layout_marginVertical="@dimen/dimen_ten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvOne"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
